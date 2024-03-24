@@ -2,14 +2,14 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import Avatar from '$lib/components/avatar.svelte';
-    import Logo from '$lib/components/logo.svelte';
+	import Logo from '$lib/components/logo.svelte';
 	import '../app.css';
 </script>
 
 <header
 	style="display: flex; width: 100%; padding: 0 20px; background-color: #fff; border-bottom: 1px solid #ddd; align-items: center;"
 >
-	<Logo/>
+	<Logo />
 	{#if $page.data.user}
 		<div class="ml-auto">
 			<Avatar />

@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	$: user = $page.data.user;
-  $: open = false;
+	$: open = false;
 </script>
 
 {#if user}
 	<div class="relative">
 		<button
-      on:click = {() => open = !open}
+			on:click={() => (open = !open)}
 			type="button"
 			class="-m-1.5 flex items-center p-1.5"
-      style="margin: -6px; display: flex; align-items: center; padding: 6px;"
+			style="margin: -6px; display: flex; align-items: center; padding: 6px;"
 			id="user-menu-button"
 			aria-expanded="false"
 			aria-haspopup="true"
@@ -18,7 +18,7 @@
 			<span class="sr-only">Open user menu</span>
 			<img
 				class="h-8 w-8 rounded-full bg-gray-50"
-        style="height: 32px; width: 32px; border-radius: 100%; background-color: gray;"
+				style="height: 32px; width: 32px; border-radius: 100%; background-color: gray;"
 				src={`data:image/jpeg;base64, ${user.picture}`}
 				alt=""
 			/>

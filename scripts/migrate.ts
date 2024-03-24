@@ -1,5 +1,5 @@
 #! ~/.bun/bin/bun
-import { Database } from "bun:sqlite";
+import { Database } from 'bun:sqlite';
 
 const db = new Database('./db.sqlite');
 console.log('DROPPING TABLES');
